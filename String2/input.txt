@@ -1,4 +1,3 @@
-3
-ababaabab ab
+2
+banana bana
 asakusa sa
-abceabce abcd
