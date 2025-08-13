@@ -11,6 +11,7 @@ for tc in range(1, T+1):
     i = 0
 
     cnt = 0
+
     # while i < N:
     #     j = 0
     #     while i < N and j < M:
