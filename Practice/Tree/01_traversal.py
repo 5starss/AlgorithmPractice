@@ -43,16 +43,16 @@ def postorder2(start):
 
 # BFS의 느낌으로 출력
 def levelorder(start):
-    q = [start]
+    q = [start]  # 큐 생성
 
     # 위에서부터 아래로 순서대로 출력
     while q:
         v = q.pop(0)
-        print(v, end=' ')
+        print(v, end=' ')  # 출력
 
-        for i in adj_list[v]:
+        for i in adj_list[v]:  # 인접한 노?드 확인
             if i:
-                q.append(i)
+                q.append(i)  # 인접한 노드를 큐에 추가
 
 
 def levelorder2(start):
