@@ -2,17 +2,35 @@ import sys
 
 input = sys.stdin.readline
 
+def check(mid, M):
+    sum_ = 0
+    for i in arr:
+        if mid < i:
+            sum_ += (i - mid)
+        if sum_ >= M:
+            return True
+
+    return False
+
+
 N, M = map(int, input().split())
 
-arr = sorted(list(map(int, input().split())), reverse=True)
-dict_ = dict()
+arr = list(map(int, input().split()))
+max_ = max(arr)
+min_ = 0
+ans = 0
 
-for i in arr:
-    dict_[i] = dict_.setdefault(i, 0) + 1
+while max_ >= min_:
+    mid = (max_ + min_) // 2
 
-sum_ = 0
-keys = list(dict_.keys())
-for i in range(1, len(keys)):
-    pass
+    if check(mid, M):
+        ans = mid
+        min_ = mid + 1
+    else:
+        max_ = mid - 1
+
+print(ans)
+
+
 
 
