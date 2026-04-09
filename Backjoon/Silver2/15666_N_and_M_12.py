@@ -1,0 +1,36 @@
+import sys
+input = sys.stdin.readline
+
+def recur(cnt=0):
+    if cnt == M:
+        tmp = answer[0]
+        for i in range(1, M):
+            tmp *= 10000
+            tmp += answer[i]
+
+        if tmp not in set_visited:
+            set_.append(answer[:])
+            set_visited.add(tmp)
+        return
+
+    for i in range(N):
+        if answer and answer[-1] > arr[i]:
+            continue
+        answer.append(arr[i])
+        recur(cnt+1)
+        answer.pop()
+
+    return
+
+N, M = map(int, input().split())
+arr = sorted(list(map(int,input().split())))
+visited = [0] * N
+answer = []
+set_visited = set()
+set_ = []
+
+recur()
+
+
+for i in set_:
+    print(*i)
