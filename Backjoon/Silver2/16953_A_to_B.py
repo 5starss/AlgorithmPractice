@@ -1,7 +1,6 @@
 # 앞에서부터 시작(BFS)
 # a, b = map(int, input().split())
 # queue = [(a,1)]
-# visited = set()
 #
 # while queue:
 #     current, cnt = queue.pop(0)
@@ -9,21 +8,12 @@
 #     if current > b:
 #         continue
 #
-#     one = current * 10 + 1
-#     two = current * 2
-#
-#     if two == b or one == b:
+#     if current * 2 == b or current * 10 + 1 == b:
 #         print(cnt)
 #         break
 #     else:
-#         if one not in visited:
-#             queue.append((current * 10 + 1, cnt))
-#             visited.add(one)
-#
-#         if two not in visited:
-#             queue.append((current * 2, cnt))
-#             visited.add(two)
-#
+#         queue.append((current * 2, cnt))
+#         queue.append((current * 10 + 1, cnt))
 # else:
 #     print(-1)
 
